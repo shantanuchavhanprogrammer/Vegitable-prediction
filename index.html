@@ -1,0 +1,11 @@
+<h1>Vegitable Detection</h1>
+
+<form action="/predict" method="post" enctype="multipart/form-data">
+  <label for="image">Upload an image of a vegetable:</label>
+  <input type="file" id="image" name="image" accept="image/*" required>
+  <button type="submit">Detect</button>
+  </form>
+
+<h2>Results</h2>
+<p>{% if result %}{{ result }}{% else %}No results to display.{% endif %}</p>
+
